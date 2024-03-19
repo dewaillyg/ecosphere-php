@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --questions-bg-color: #86A085;
+    --questions-bg-color-active: #0d92df;
+    --questions-stack-color: whitesmoke;
+
+    --questions_header: 50px;
+}
+
+/* Globale */
+#body_questions,
+#body_questions * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#questions {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--questions-bg-color);
+    padding: 5px 10px;
+}
+
+/* Header */
+#questions .questions_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--questions_header);
+    border-bottom: 1px solid var(--questions-stack-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+#questions .questions_header .questions__header_page-num {
+    font-size: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 1px solid var(--questions-stack-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--questions-bg-color);
+    color: var(--questions-stack-color);
+    margin: 0 10px;
+    border-radius: 50%;
+    font-weight: lighter;
+    transition: all .25s ease-in-out;
+}
+
+#questions .questions_header .questions__active {
+    background-color: var(--questions-stack-color);
+    font-weight: bolder;
+    color: var(--questions-bg-color);
+    animation: questions_bounce .75s ease-in-out;
+    animation-iteration-count: 1;
+    box-shadow: 1px 1px 15px var(--questions-stack-color);
+}
+
+/* Page */
+
+#questions__form {
+    height: calc(100vh - var(--questions_header));
+}
+
+.questions__page {
+    display: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.questions__form_logo-container {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions__form_logo-container .questions__form_logo {
+    width: 75px;
+    height: 75px;
+    background: url("../assets/images/LOGO\ NOIR.png") center center/cover;
+}
+
+.questions__form_title-container {
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions__form_title-container .questions__form_title {
+    color: var(--questions-stack-color);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.questions__form_answers {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.questions__form_answers .questions__form_answer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    height: calc(100% / 3);
+}
+
+/* BOUTTONS */
+
+#questions .questions__form_answers .questions__form_answer input,
+#questions .questions__form_answers .questions__form_answer label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#questions .questions__form_answers .questions__form_answer input {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    width: 70%;
+    height: 60%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    border-radius: 10px;
+    transition: all .25s ease-in-out;
+    z-index: 98;
+}
+
+#questions .questions__form_answers .questions__form_answer label {
+    z-index: 99;
+}
+
+#questions .questions__form_answers .questions__form_answer input:checked {
+    background-color: rgb(190, 234, 185);
+}
+
+.questions__form_button-next,
+.questions__form_button-prev,
+.questions__form_button-submit {
+    position: absolute;
+    bottom: 5%;
+    transform: translateY(50%);
+    font-family: 'Poppins', sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    transform: scale(2);
+}
+
+#questions i {
+    color: white;
+}
+
+.questions__form_button-next,
+.questions__form_button-submit {
+    right: 25%;
+}
+
+.questions__form_button-prev {
+    left: 25%;
+}
+
+@keyframes questions_bounce {
+
+    33% {
+        transform: translateY(-5px);
+    }
+
+    66% {
+        transform: translateY(5px);
+    }
+}

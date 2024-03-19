@@ -1,0 +1,207 @@
+@font-face {
+    font-family: Helvetica;
+    src: url("../assets/fonts/Helvetica-Now-Var.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    background: #86A085;
+    font-family: Helvetica, sans-serif;
+}
+
+
+header {
+    height: 16vh;
+    width: 100vw;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+header .vide {
+    width: calc(100%/3);
+    height: 100%;
+}
+
+header .logo {
+    height: 100%;
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+header .logo img {
+    height: 80px;
+}
+
+header .icons {
+    height: 100%;
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .icons i::before {
+    font-size: 30px;
+    color: white;
+}
+
+
+main {
+    height: auto;
+    width: 100vw;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+main .jour {
+    height: 20%;
+    width: 75%;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+main .jour h2 {
+    font-weight: 300;
+}
+
+main .jour h3 {
+    position: relative;
+    top: 5px;
+    font-weight: 700;
+}
+
+
+
+main .mois {
+
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+main .mois .defis-mois {
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    position: relative;
+    transition: .3s ease;
+}
+main .mois .defis-mois:last-child {
+    border-bottom: none;
+}
+
+main .mois .defis-mois h4{
+    font-size: 20px;
+}
+
+
+main .mois .defis-mois.active {
+    height: 150px;
+    background: white;
+}
+
+.defis-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.defis-title i {
+    transform: rotate(0deg);
+    transition: .3s ease;
+}
+
+.defis-content {
+    display: none;
+    padding: 0 10px;
+    text-align: justify;
+}
+
+@media screen and (min-width : 390px) {
+
+    main .jour {
+        height: 115px;
+        width: 80%;
+        border: 3px solid black;
+        padding: 20px;
+    }
+
+    main .jour h2 {
+        font-weight: 500;
+        font-size: 25px;
+    }
+    
+    main .jour h3 {
+        font-size: 22px;
+        font-weight: 800;
+
+    }
+
+    main .mois .defis-mois h4{
+        font-size: 25px;
+    }
+
+    main .mois .defis-mois {
+        height: 60px;
+    }
+
+}
+
+/* .defis-title i::before{
+    animation: zizi .5s ease;
+}
+
+@keyframes zizi {
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(180deg);
+    }
+} */
+
+
+footer {
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+footer .icons {
+    height: 100%;
+    width: calc(100%/3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer .icons img {
+    color: white;
+    height: 50px;
+}
