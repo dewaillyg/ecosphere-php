@@ -17,9 +17,9 @@ $user_data = array();
 // On affiche chaque recette une à une
 foreach ($recipes as $recipe) {
     $user_data["username"] = $recipe['username'];
+    $user_data["mail"] = $recipe['mail'];
     $user_data["localisation"] = $recipe['localisation'];
     $user_data["numero"] = $recipe['numero'];
-    $user_data["mail"] = $recipe['mail'];
 }
 ?>
 

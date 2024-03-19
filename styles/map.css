@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+#locate {
+    position: fixed;
+    top: 85vh;
+    left: 47%;
+    height: 50px;
+    border: 2px solid green;
+    width: 50px;
+    border-radius: 100%;
+    z-index: 9999!important;
+    display: flex;
+    align-items: center;
+    transition: all .25s ease-in-out;
+    justify-content: center;
+    transform-origin: center;
+}
+
+.fa-location-dot {
+    color: green;
+    transform: scale(1.6);
+}
+
+#locate:hover {
+    transform: scale(1.25);
+}
+
+.input {
+    position: absolute;
+    z-index: 9999;
+    height: 100px;
+    width: 50px;
+    bottom: 5vh;
+    right: 5vh;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: rgba(200, 200, 200, .5);
+    border-radius: 10px;
+    color: #86A085;
+    font-weight: bolder;
+}
+
+.input > div {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.input input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid #86A085;
+    transition: background-color .5s ease-in-out;
+    border-radius: 50%;
+}
+
+.input input:checked {
+    background-color: #86A085;
+}
+
+
+#return {
+    position: absolute;
+    z-index: 999;
+    top: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #86A085;
+}
+
+a {
+    color: #86A085;
+}
+
+#return i {
+    
+    font-size: 2rem;
+}
+
+#infos {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    background-color: white;
+    z-index: 9999!important;
+    transition: height 1s ease-in-out, opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.infos-active {
+    height: 50vh!important;
+    opacity: 1!important;
+    /* animation: blockInfo 3s ease-in-out forwards; */
+}
+
+/* @keyframes blockInfo {
+     to {
+        height: 50vh;
+        opacity: 1;
+    }
+} */
+
+#mapReturn {
+    display: block;
+}

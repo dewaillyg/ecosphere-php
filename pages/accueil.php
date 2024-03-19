@@ -91,7 +91,7 @@ if (!isset($_SESSION['user_id'])) {
                <a href="./accueil.php"> <img src="../assets/icones-footer/arbre.svg" alt=""> </a>
             </div>
             <div class="icons icons-3">
-               <a href="./accueil.php"> <img src="../assets/icones-footer/maps.svg" alt=""> </a>
+               <a href="./map.php"> <img src="../assets/icones-footer/maps.svg" alt=""> </a>
             </div>
     </footer>
 

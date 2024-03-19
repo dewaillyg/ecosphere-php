@@ -25,25 +25,20 @@ header{
 
 .top{
     display: flex;
-    
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
 }
 
 .header-content{
-    width: calc(100%/5);
+    width: calc(100%/3);
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-
-header img{
-    height: 80px;
-    width: 80px;
+.header-content:nth-child(2){
+    height: 60px;
+    width: 40%;
 }
 
 .header-content .icons i {
@@ -177,7 +172,19 @@ footer .icons img {
   transform: translate(-50%, -90%);
 }
 
+@media screen and (min-width : 390px) {
+  
+  .arbre{
+    width: 95%;
+    height: 55%;
+  }
 
+
+  footer .icons img {
+    color: white;
+    height: 60px;
+}
+}
 
 
 
@@ -193,7 +200,9 @@ footer .icons img {
 
 .menu {
     display:inline-block;
+    margin:0 20px 0 20px;
     position: relative;
+    left: 15px;
   }
 
 
