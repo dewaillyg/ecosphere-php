@@ -14,11 +14,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $sql = "INSERT INTO user (mail, username, password) VALUES (:email, :username, :password)";
     $stmt = $pdo->prepare($sql);
     $result = $stmt->execute(['email' => $email, 'username' => $username, 'password' => $password]);
-
+    
     if ($result) {
         $_SESSION['user_id'] = $_POST['username'];
+        $_SESSION['id'] = $_POST['username'];
         $message = 'Inscription réussie!';
-        header('Location: question.php');
+        header('Location: question.php?');
     } else {
         $message = 'Erreur lors de l\'inscription.';
     }

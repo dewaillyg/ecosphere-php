@@ -10,134 +10,176 @@
 }
 
 body {
+  height: 100vh;
+  overflow-x-x: hidden!important;
   width: 100vw;
-  height: 100%;
-  background: #86a085;
-  font-family: "Aclonica";
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;
 }
 
 header {
-  height: 20vh;
-  width: 100vw;
+  background: #86A085;
   display: flex;
-  align-items: end;
-  justify-content: center;
-}
-
-header .vide {
-  width: calc(100% / 3);
-  height: 100%;
-}
-
-header .logo {
-  height: 100%;
-  width: calc(100% / 3);
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-header .logo img {
+.header_top {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: "Helvetica";
+  color: white;
+}
+
+.header_bottom {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+}
+
+.avatar {
   height: 60px;
-}
-
-header .icons {
-  height: 100%;
-  width: calc(100% / 3);
+  width: 60px;
+  border-radius: 100%;
+  background-color: white;
+  z-index: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-header .icons i {
-  color: white;
-  font-size: 30px;
+  justify-content: center;
 }
 
-.wrapper {
-  width: 90vw;
-  background: transparent;
-  color: white;
-  border-radius: 10px;
-  padding: 10px 20px;
+.avatar > * {
+  transform: scale(1.5);
+  color: #86A085;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 85% 15%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  background-color: #86A085;
+}
+
+main > div {
+  width: 95vw;
   margin: 0 auto;
-}
-
-.wrapper h1 {
-  font-size: 33px;
-  text-align: center;
-}
-
-.wrapper .input-box {
-  width: 100%;
-  height: 50px;
-  margin: 20px 0;
-}
-
-.input-box input {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 40px;
-  font-size: 16px;
-  color: white;
-  padding: 20px 45px 20px 20px;
-}
-
-.input-box input::placeholder {
-  color: rgba(255, 255, 255, 0.836);
-}
-
-.wrapper .btn {
-  width: 100%;
-  height: 45px;
-  background: white;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-  font-weight: 600;
-  font-family: "Aclonica";
-}
-
-.input_box_1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid white;
 }
 
+main > div .left {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
 
+.left i {
+  color: white;
+  transform: scale(1.5);
+}
+
+main > div .right {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+input {
+  border: none;
+  padding: 10px 50px;
+  border-radius: 10px;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  overflow-x: hidden;
+  transition: all .25s ease-in-out;
+}
 
 input::placeholder {
-  font-size: 0.7rem;
-  color: red;
+  color: rgba(255,255,255,.5);
+  font-style: italic;
+  overflow-x: hidden;
 }
 
-.btn {
-  margin: 20px 0;
+input:focus, input:active {
+  font-size: 1.5rem;
+  overflow-x: hidden;
+  color: white;
 }
 
-.top {
-  height: 30px;
+.eye {
+  color: white;
+  transform: scale(1.2);
+  transition: all .25s ease;
+}
+
+.fa-eye {
+  opacity: .9;
+}
+
+.fa-eye-slash {
+  opacity: .25;
+}
+
+footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  font-size: 1.1rem;
+  justify-content: center;
+  background-color: #86A085;
 }
 
-.input_box_1 > input {
-  margin: 0 3px;
+input[type="submit"] {
+  border: 1px solid white;
 }
 
-.name {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0;
+#return,
+#off  {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+a {
+  color: rgba(255,255,255,.8);
+}
+
+#return i, #off i {
+  font-size: 2rem;
+}
+
+#error{
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#off {
+  left: 85%;
 }

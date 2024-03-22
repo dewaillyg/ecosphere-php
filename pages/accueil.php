@@ -85,7 +85,7 @@ if (!isset($_SESSION['user_id'])) {
 
     <footer>
         <div class="icons icons-2">
-           <a href="./defis.html"> <img src="../assets/icones-footer/defis.svg" alt=""> </a>
+           <a href="./defis.php"> <img src="../assets/icones-footer/defis.svg" alt=""> </a>
         </div>
             <div class="icons icons-1">
                <a href="./accueil.php"> <img src="../assets/icones-footer/arbre.svg" alt=""> </a>

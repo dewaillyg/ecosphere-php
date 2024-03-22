@@ -100,7 +100,7 @@ main .mois {
 }
 
 main .mois .defis-mois {
-    height: 40px;
+    height: 50px;
     width: 100%;
     border-bottom: 1px solid black;
     position: relative;
@@ -111,7 +111,7 @@ main .mois .defis-mois:last-child {
 }
 
 main .mois .defis-mois h4{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
@@ -158,7 +158,7 @@ main .mois .defis-mois.active {
     }
 
     main .mois .defis-mois h4{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     main .mois .defis-mois {
